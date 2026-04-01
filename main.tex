@@ -1,5 +1,5 @@
 \documentclass[a4paper,12pt]{article}
-% This fixes a bug so its staying i guess
+% Fix head height
 \setlength{\headheight}{14.49998pt}
 \addtolength{\topmargin}{-2.49998pt}
 % Package to make citations superscrit with brackets
@@ -64,19 +64,19 @@
 \DeclareMathOperator{\PSL}{PSL}
 
  
-\begin{document}
+
 % Makes header
 \pagestyle{fancy}
-\thispagestyle{empty}
-\fancyhead[R]{\textit{MAT3743 - Hiver 2025}}
+\fancyhead[R]{\textit{MAT4167 - Hiver 2026}}
 \fancyhead[L]{}
 % Makes footnotes with an asterisk
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\begin{document}
 \begin{center}
 \Large{\textbf{Factoring primes in a number field}}
 \vspace{0.4cm}
 \normalsize
-\\ Amélie Boucher, Émile Renaud, Eddy *insert last name* \\
+\\ Amélie Boucher, Émile Renaud, Eddy insert last name \\
 \vspace{0.1cm}
 \textit{MAT4167 - Algebraic number theory}
 \medskip
@@ -84,15 +84,22 @@
 \end{center}
 {\color{gray}\hrule}
 \medskip
-%\input{./sections/1_intro.tex}
+%Section input
+\input{./sections/1_intro.tex}
 \medskip
-%\input{./sections/2_section.tex}
+\input{./sections/2_section.tex}
 \medskip
-%\input{./sections/3_section.tex}
+\input{./sections/3_section.tex}
 \medskip
-%\input{./sections/4_section.tex}
+\input{./sections/4_section.tex}
 \medskip
-%\input{./sections/conclusion.tex}
+\input{./sections/conclusion.tex}
+
+%Exemple de citation dans le document
+Ceci est une citation vers le livre de référence \cite{IntroAlgNumTh}.
+%Bibliographie
 \bibliographystyle{plain}
 \bibliography{references}
 \end{document}
+
+
