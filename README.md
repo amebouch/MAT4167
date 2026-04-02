@@ -7,7 +7,7 @@ J'utilise VScode pour éditer le code localement et je vous invite à faire la m
 
 Le concept c'est de périodiquement télécharger les updates et de upload nos propres updates quand on a travaillé dessus.
 Donc, voici les étapes à suivre quand vous voulez apporter des changements (je me fie à ce que je fais sur VSCode, mais il se peut que ce soit différent si vous utilisez un autre logiciel):
-Chaque fois que vous ouvrez VSCode, aller dans l'icone à gauche des trois cercles reliés par des fils et appuyez sur "sync changes".
+Chaque fois que vous ouvrez VSCode, aller dans l'icone à gauche qui ressemble à des cercles reliés par des fils et appuyez sur "sync changes".
 Ensuite, allez travailler sur la section que vous voulez. IMPORTANT: on ne doit jamais être plusieurs à travailler sur la même section en même temps, sinon, il va y avoir des bugs - donc, quand on travaille sur une section, on peut le mentionner dans notre group chat pour que les autres n'y touchent pas. 
 Une fois que vous avez travaillé sur une section, retourner dans l'icone à gauche. Vous allez voir un icone "Commit". En haut, il va y avoir un endroit pour écrire un message. Ce message sert à informer les autres des changements apportés. Par exemple, "Changements section 2". Donc, vous écrivez un message et ensuite, vous cliquez sur Commit.
 Après avoir fait le Commit, il va apparaitre un bouton: "Sync changes". Cliquez sur cela. Ça va envoyer vos modifications sur GitHub. 
