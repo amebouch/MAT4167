@@ -27,6 +27,9 @@
 
 \usepackage{amsfonts,amsmath,amssymb}
 
+\usepackage{titlesec}
+\titleformat{\section}{\centering\normalfont\Large\bfseries}{\thesection}{1em}{}
+
 % Math Shortcuts
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{\mathbb{Z}}
@@ -85,6 +88,15 @@
 \end{center}
 {\color{gray}\hrule}
 \medskip
+
+{\color{gray}\hrule}
+\medskip
+
+\renewcommand*\contentsname{Table des matières}
+\tableofcontents
+
+\medskip
+
 %Section input
 \input{./sections/1_intro.tex}
 \medskip
