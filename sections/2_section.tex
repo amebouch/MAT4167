@@ -1,20 +1,39 @@
 \medskip 
 {\color{gray}\hrule}
-\section{A preamble about factorization, primes and such}
+\section{Preliminary Notions}
 \medskip 
 {\color{gray}\hrule}
 \medskip 
-\subsection{Monogenic Field}
+\subsection{Number fields and ring of integers}
 \begin{flushleft}
-    \quad\textbf{Definition:} Let K be an algebraic number field. K is monogenic if there exists a $\theta$ 
-    in $\mathcal{O}_K$ such that 
+    \quad\textbf{Definition:} A number field is a subfield of $\mathbb{C}$ that is finite-dimensional as a $\mathbb{Q}$-vector space.\\
+    \quad\textbf{Notation:} Let $\alpha \in \mathbb{C}$, we define 
     \[
-    \mathcal{O}_K = \mathbb{Z} + \mathbb{Z}\theta + \cdots + \mathbb{Z}\theta^{n-1}
+    \mathbb{Q}(\alpha) = \left\{ \frac{f(\alpha)}{g(\alpha)} \,\middle|\, f,g \in \mathbb{Q}[X],\ g(\alpha) \neq 0 \right\}.
     \]
-    with $[K:\mathbb{Q}] = n$ (the degree of $K$ over $\mathbb{Q}$).
+    \quad\textbf{Definition:} Let K be a number field. The set of algebraic integers in K is called the ring of integers of K, denoted by $\mathcal{O}_K$.
+\end{flushleft}
+
+\subsection{Ideals and prime ideals}
+\begin{flushleft}
+    \quad\textbf{Definition:} Let $R$ be a ring. A subset $I$ of $R$ is called an \textit{ideal} of $R$ if it satisfies the following conditions:
+    
+    \begin{enumerate}
+        \item $I$ is an additive subgroup of $(R, +)$;
+        \item For every $r \in R$, $rI \subseteq I$ and $Ir \subseteq I$.
+    \end{enumerate}
+    
+    Here, $rI := \{ ra : a \in I \}$ and $Ir := \{ ar : a \in I \}$.
+\end{flushleft}
+\begin{flushleft}
+    \quad\textbf{Definition:} Let R be a commutative ring. An ideal $I$ of $R$ is called a \textit{prime ideal} if $I$ is proper and satisfies the following condition:
+    \[
+    \forall a, b \in R, ab \in I \Rightarrow a \in I or b \in I.
+    \]
+\end{flushleft}
+
+\subsection{Reduction modulo p}
+\begin{flushleft}
+    \quad\textbf{def}...
 \end{flushleft}
 \bigskip
-We are interested in factorizing ideals of a monogenic number field into a product of 
-prime ideals. A theorem proved by Dedekind in 1878 provides us with such a method, by considering congruences between the prime Factorization of 
-an element of K and a product of irreducible polynomials in $\mathbb{Z}/p\mathbb{Z}$.
-
