@@ -39,3 +39,234 @@ For example, in degree $4$, all possible factorizations correspond to the partit
 here ramification allows repeated terms.\\
 In higher degrees, there are more such partitions, and each one corresponds to a different way a prime can factor in the extension.
 
+\subsection{Example: A Cubic Field}
+
+Consider the field
+\[
+K = \mathbb{Q}(\alpha), \quad \text{where } \alpha^3 - 3 = 0.
+\]
+i.e. $\alpha = \sqrt[3]{3}$
+\\\\This is a degree $3$ extension. We will use Dedekind's theorem to compute (p), with p=2, 3, 5
+\subsubsection*{Prime $p = 2$}
+
+Now reduce modulo $2$:
+\[
+x^3 - 3 \equiv x^3 + 1 \equiv (x+1)(x^2+x+1) \pmod{2}.
+\]
+The two factors are irreducible over $\mathbb{F}_2$. Therefore, (2) can be written as:
+\[
+(2) = \mathfrak{p}_1 \mathfrak{p}_2,
+\]
+With:
+\begin{itemize}
+    \item $f(\mathfrak{p}_1/2)$=1 and $f(\mathfrak{p}_2/2)$=2
+    \item $e_1$=$e_2$=1
+    \item $\mathfrak{p}_1=(2,\sqrt[3]{3}+1)$ and $\mathfrak{p}_2=(2,\sqrt[3]{9}+\sqrt[3]{3}+1)$
+\end{itemize}
+\subsubsection*{Prime $p = 3$}
+
+Reducing the polynomial modulo $3$, we obtain
+\[
+x^3 - 3 \equiv x^3 \pmod{3}.
+\]
+This polynomial has a triple root at $0$ so:
+\[
+(3) = \mathfrak{p}^3 \text{, with }  \mathfrak{p}=(3,\sqrt[3]{3})
+\]
+Thus, $3$ is totally ramified in this field.
+\subsubsection*{Prime $p = 5$}
+
+Reducing modulo $5$, we consider
+\[
+x^3 - 3 \pmod{5}.
+\]
+We can easily see that $2$ is a root, so the polynomial factors as
+\[
+(x-2)(x^2 + 2x + 4) \pmod{5}
+\]
+The two factors are irreducible over $\mathbb{F}_5$, so we have the factorization
+\[
+(5) = \mathfrak{p}_1 \mathfrak{p}_2,
+\]
+With:
+\begin{itemize}
+    \item $f(\mathfrak{p}_1/5)$=1 and $f(\mathfrak{p}_2/5)$=2
+    \item $e_1$=$e_2$=1
+    \item $\mathfrak{p}_1=(5,\sqrt[3]{3}-2)$ and $\mathfrak{p}_2=(5,\sqrt[3]{9}+2\sqrt[3]{3}+4)$
+\end{itemize}
+\[
+\]
+In every case (p=2, 3, 5), we have that $\sum{e_if_i}=3=[K: \mathbb{Q}]$
+
+\subsection{Example: A Quartic Field}
+
+Now consider the field \[ K = \mathbb{Q}(\alpha), \quad \text{where } \alpha^4 + 1 = 0. \]
+i.e. $\alpha = \frac{1+i}{\sqrt2}$
+\\\\This is a degree $4$ extension. We will use Dedekind’s theorem to compute $(p)$ for $p = 2, 3, 5$.
+\subsubsection*{Prime $p = 2$}
+
+Reducing modulo $2$, we obtain
+\[
+x^4+1\equiv (x+1)^4 \pmod{2}.
+\]
+
+Thus,
+\[
+(2)=\mathfrak p^4,
+\]
+with:
+\begin{itemize}
+\item $f(\mathfrak p/2)=1$
+\item $e=4$
+\item $\mathfrak p=\left(2,\frac{1+i}{\sqrt2}+1\right)$
+\end{itemize}
+\subsubsection*{Prime $p = 3$}
+
+Reducing modulo $3$, we obtain
+\[
+x^4+1 \pmod{3}.
+\]
+This polynomial factors as
+\[
+x^4+1=(x^2+x+2)(x^2-x+2)\pmod{3}.
+\]
+Both factors are irreducible over $\mathbb{F}_3$. Therefore, we have the factorization
+\[
+(3)=\mathfrak p_1\mathfrak p_2,
+\]
+with:
+\begin{itemize}
+\item $f(\mathfrak p_1/3)=f(\mathfrak p_2/3)=2$
+\item $e_1=e_2=1$
+\item $\mathfrak p_1=\left(3,\; i+\frac{1+i}{\sqrt2}+2\right)
+\qquad\text{and}\qquad
+\mathfrak p_2=\left(3,\; i-\frac{1+i}{\sqrt2}+2\right).$
+\end{itemize}
+\subsubsection*{Prime $p = 5$}
+Reducing modulo $5$, we obtain
+\[
+x^4+1 \pmod{5}.
+\]
+This polynomial factors as
+\[
+(x^2+2)(x^2-2)\pmod{5}.
+\]
+Both factors are irreducible over $\mathbb{F}_5$. Therefore, we have the factorization
+\[
+(5)=\mathfrak p_1\mathfrak p_2,
+\]
+with:
+\begin{itemize}
+\item $f(\mathfrak p_1/5)=f(\mathfrak p_2/5)=2$
+\item $e_1=e_2=1$
+\item $\mathfrak p_1=(5,i+2)$ and $\mathfrak p_2=(5,i-2)$
+\end{itemize}
+
+In all three cases, we have that
+\[
+\sum e_i f_i=4=[K:\mathbb Q].
+\]
+\subsection{Further Structural Remarks}
+Even without doing all the calculations, it helps to step back and see the bigger picture. The way a prime $(p)$ splits in a number field isn’t random --- it actually tells you something about the field’s internal structure and embeddings.
+\\\\
+\textbf{Definition:} A field extension $K/F$ is called \textbf{\textit{Galois}} if $K$ is the splitting field over $F$ of a polynomial in $F[x]$ with no repeated roots.\\\\
+When the extension $K/\mathbb{Q}$ is \textbf{\textit{Galois}}, the embeddings of the field into itself are described by a group called the Galois group $\mathrm{Gal}(K/\mathbb{Q})$. This group acts by permuting the roots of the minimal polynomial and this action explains how primes behave in the extension.
+\\\\
+If a prime $p$ does not ramify, we can associate to it a special element of this group called the \emph{Frobenius automorphism}. You can think of it as a rule that rearranges the roots in a specific way. The way it permutes the roots tells us exactly how $(p)$ factors in the number field.
+\\\\
+
+More concretely:
+\begin{itemize}
+\item the number of prime ideals $p_i$ corresponds to how many separate orbits appear in this permutation,
+\item the inertia degrees $f_i$ correspond to the sizes of these orbits.
+\end{itemize}
+So, primes that factor in the same way correspond to elements of the Galois group that behave in the same way (they lie in the same conjugacy class). Hence, factoring primes is closely connected to understanding the embeddings of the field:
+\[
+\text{prime factorization} \quad \longleftrightarrow \quad \text{embeddings of the field}.
+\]
+
+\textbf{Example.} Consider the field $K = \mathbb{Q}(i)$, which is a Galois extension of degree $2$. Its Galois group is
+\[
+\mathrm{Gal}(K/\mathbb{Q}) = \{ \mathrm{id}, \sigma \}, \quad \text{where } \sigma(i) = -i.
+\]
+
+Let $p$ be a prime number. We study the ideal $(p)$ in $\mathcal{O}_K = \mathbb{Z}[i]$.
+
+\begin{itemize}
+    \item \textbf{Case $p \equiv 1 \pmod{4}$.}
+\end{itemize}
+
+In this case, $-1$ is a square modulo $p$, so there exists $a \in \mathbb{Z}$ such that
+\[
+a^2 \equiv -1 \pmod{p}.
+\]
+This means that the polynomial $x^2 + 1$ has two distinct roots modulo $p$, so it factors:
+\[
+x^2 + 1 \equiv (x - a)(x + a) \pmod{p}.
+\]
+
+By Dedekind’s theorem, this implies that $(p)$ splits in $\mathbb{Z}[i]$:
+\[
+(p) = \mathfrak{p}_1 \mathfrak{p}_2,
+\]
+where
+\[
+\mathfrak{p}_1 = (p,\, i - a), \quad \mathfrak{p}_2 = (p,\, i + a).
+\]
+
+They are distinct and:
+\[
+e_1 = e_2 = 1, \quad f_1 = f_2 = 1.
+\]
+
+The Frobenius map acts trivially.
+\medskip
+
+\begin{itemize}
+    \item\textbf{Case $p \equiv 3 \pmod{4}$.}
+\end{itemize}
+
+Here, $-1$ is not a square modulo $p$, so the polynomial $x^2 + 1$ has no roots in $\mathbb{F}_p$ and remains irreducible.
+
+By Dedekind’s theorem, $(p)$ remains prime in $\mathbb{Z}[i]$:
+\[
+(p) = \mathfrak{p}.
+\]
+
+Thus,
+\[
+e = 1, \quad f = 2.
+\]
+
+The Frobenius map acts nontrivially: it exchanges the two complex roots $i$ and $-i$.
+
+\medskip
+
+\begin{itemize}
+    \item \textbf{Case $p = 2$.}  
+\end{itemize}
+
+We reduce the polynomial modulo $2$:
+\[
+x^2 + 1 \equiv x^2 + 1 \equiv (x+1)^2 \pmod{2}.
+\]
+
+So the polynomial has a repeated root. Thus,
+\[
+(2) = \mathfrak{p}^2,
+\quad \text{where } \mathfrak{p} = (2,\, 1+i).
+\]
+
+And,
+\[
+e = 2, \quad f = 1.
+\]
+
+
+This example shows clearly that how a prime splits is directly linked to how the Galois group acts.
+\\
+\subsection{Interpretation of Higher-Degree Behavior}
+
+What these examples illustrate is that, as the degree increases, primes gain more flexibility in how they decompose. Even in degree $3$, we already see several distinct patterns, and in degree $4$, the number of possibilities grows further.
+\\
+Rather than being arbitrary, these patterns reflect how the arithmetic of $\mathbb{Q}$ interacts with the algebraic structure of $K$. The factorization type of a prime is closely tied to how the minimal polynomial behaves modulo $p$, and to the action of the Galois group.
