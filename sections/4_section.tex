@@ -4,3 +4,50 @@
 \medskip 
 {\color{gray}\hrule}
 \medskip
+
+\begin{flushleft}
+    \quad\textbf{Exampele 4.1} We want to find the factorization of $\langle 5 \rangle$ as a product of prime ideals in $\mathcal{O}_K$, where $K=\mathbb{Q}(\sqrt[3]{2})$.
+    Set $\theta = \sqrt[3]{2}.$ We want an integral basis for $K=\mathbb{Q}(\theta)$ so that $K$ is monogenic. Take \{${1, \theta, \theta ^2}$\}.
+    The minimal polynomial of $\theta$ over $\mathbb{Q}$ is $f(x)=x^3-2$. 
+    By checking the roots in $\mathbb{F}_5$, we find
+    \[
+    f(3)=27-2=25 \equiv 0 \pmod{5}
+    \]. So, $x-3$ is a factor of $f(x)$. Dividing gives
+    \[
+    x^3-2 \equiv (x-3)(x^2+3x+4) \pmod{5}
+    \]
+    where $x-3$ and $x^2+3x+4$ are irreduble in $\mathbb{F}_5$. Indeed, the discriminant of $x^2+3x+4$ is 
+    \[
+    3^2-4 \cdot 1 \cdot 4 = 9-16 = -7 \equiv 3 \pmod{5}
+    \] 
+    and 3 is not a square mod 5.
+
+    So, by Dedekind's theorem,
+    \[
+    (5)=P_1P_2,
+    \]
+    where
+    \[
+    P_1=(5, \theta +2) \text{, } P_2=(5, \theta^2+3theta+4)
+    \]
+    are distinct prime ideals with 
+    \[
+    N(P_1)=5 \text{, } N(P_2)=5^2=25.
+    \]
+
+    Now, we check that $P_1 P_2 = \langle 5 \rangle$.
+    \begin{align*}
+    P_1 P_2 
+    &= \langle 5, \theta + 2 \rangle \, \langle 5, \theta^2 + 3\theta + 4 \rangle \\
+    &= \langle 25,\; 5(\theta + 2),\; 5(\theta^2 + 3\theta + 4),\; (\theta + 2)(\theta^2 + 3\theta + 4) \rangle \\
+    &= \langle 25,\; 5(\theta + 2),\; 5(\theta^2 + 3\theta + 4),\; \theta^3 + 5\theta^2 + 10\theta + 8 \rangle \\
+    &= \langle 25,\; 5(\theta + 2),\; 5(\theta^2 + 3\theta + 4),\; 5\theta^2 + 10 \rangle \\
+    &= \langle 5 \rangle \, \langle 5,\; \theta + 2,\; \theta^2 + 3\theta + 4,\; \theta^2 + 2 \rangle \\
+    &= \langle 5 \rangle.
+    \end{align*}
+    as
+    \[
+    1 = 1 \cdot 5 +(2 \theta +2)(\theta +2)-2(\theta ^2 +3 \theta +4).
+    \]
+
+\end{flushleft}
